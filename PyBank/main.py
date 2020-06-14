@@ -44,11 +44,20 @@ with open(csvpath, 'r') as csvfile:
         avg_change_profit_losses.append(change_profit_losses)
     #Calculate the average of the change in profit/losses
     average_change_profit_losses = round(sum(avg_change_profit_losses) / len(avg_change_profit_losses), 2)
-  
 
+    #calculate the max increase in profit
+    greatest_increase_profit = max(avg_change_profit_losses)
+    #find the index at which the maximum increase in profit occured
+    index1 = avg_change_profit_losses.index(greatest_increase_profit) 
+    #find the corresponding date in the list 'months_num'
+    greatest_profit_date = months_num[index1 + 1]
 
-
-
+    #calculate the max decrease in losses
+    greatest_decrease_losses = min(avg_change_profit_losses)
+    #find the index at which the maximum decrease in losses occured
+    index2 = avg_change_profit_losses.index(greatest_decrease_losses)
+    #find the corresponding date in the list 'months_num'
+    greatest_losses_date = months_num [index2 + 1]
     
     #Print the final result
     print("Financial Analysis")
@@ -56,6 +65,14 @@ with open(csvpath, 'r') as csvfile:
     print(f"Total Months: {len(months_num)}")
     print(f"Total: ${sum_profit_losses}")
     print(f"Average Change: ${average_change_profit_losses}")
+    print(f"Greatest Increase in Profits: {greatest_profit_date} (${greatest_increase_profit})")
+    print(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})")
+
+    # with open(csvpath, 'w') as csvwrite:
+    #     csvwrite.write("Financial Analysis")
+    #     csvwrite.write("---------------------------")
+    #     csvwrite.write(f"Total Months: {len(months_num)}")
+        
 
 
         
