@@ -81,6 +81,3 @@ with open(csvpath, 'r') as csvfile:
     x.write (f"Greatest Increase in profits: {greatest_profit_date} (${greatest_increase_profit})\n")
     x.write(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})\n")
     x.close()
-
-    x = open('/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/pybank.txt', 'r')
-    print(x.read)
