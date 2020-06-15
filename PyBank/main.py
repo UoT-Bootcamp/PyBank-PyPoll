@@ -71,10 +71,10 @@ with open(csvpath, 'r') as csvfile:
     print(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})")
 
     #write the new .txt file
-    x = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank", "pybank.txt"), 'w')
+    x = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Analysis", "pybank.txt"), 'w')
     
     x.write("Financial Analysis\n")
-    x.write("-------------------------------\n")
+    x.write("-------------------------------")
     x.write (f"Total Months: {len(months_num)}\n")
     x.write (f"Total: ${sum_profit_losses}\n")
     x.write (f"Average Change: ${average_change_profit_losses}\n")
