@@ -74,7 +74,7 @@ with open(csvpath, 'r') as csvfile:
     x = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Analysis", "pybank.txt"), 'w')
     
     x.write("Financial Analysis\n")
-    x.write("-------------------------------")
+    x.write("-------------------------------\n")
     x.write (f"Total Months: {len(months_num)}\n")
     x.write (f"Total: ${sum_profit_losses}\n")
     x.write (f"Average Change: ${average_change_profit_losses}\n")
