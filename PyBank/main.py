@@ -37,11 +37,13 @@ with open(csvpath, 'r') as csvfile:
     #loop till the index is not equal to (length of list - 1)
     while index != (len(total_profit_losses) - 1):
         #calculate the change in profit/losses
-        change_profit_losses = total_profit_losses[index + 1]- total_profit_losses[index]
+        change_profit_losses = total_profit_losses[index + 1] - total_profit_losses[index]
         #update the value of index
         index +=1
         #Append the values in the empty list 'avg_change_profit_losses
         avg_change_profit_losses.append(change_profit_losses)
+   
+        
     #Calculate the average of the change in profit/losses
     average_change_profit_losses = round(sum(avg_change_profit_losses) / len(avg_change_profit_losses), 2)
 
@@ -68,18 +70,17 @@ with open(csvpath, 'r') as csvfile:
     print(f"Greatest Increase in Profits: {greatest_profit_date} (${greatest_increase_profit})")
     print(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})")
 
-    # with open(csvpath, 'w') as csvwrite:
-    #     csvwrite.write("Financial Analysis")
-    #     csvwrite.write("---------------------------")
-    #     csvwrite.write(f"Total Months: {len(months_num)}")
-        
-
-
-        
-        
-       
+    #write the new .txt file
+    x = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank", "pybank.txt"), 'w')
     
-  
+    x.write("Financial Analysis\n")
+    x.write("-------------------------------\n")
+    x.write (f"Total Months: {len(months_num)}\n")
+    x.write (f"Total: ${sum_profit_losses}\n")
+    x.write (f"Average Change: ${average_change_profit_losses}\n")
+    x.write (f"Greatest Increase in profits: {greatest_profit_date} (${greatest_increase_profit})\n")
+    x.write(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})\n")
+    x.close()
 
-
-
+    x = open('/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/pybank.txt', 'r')
+    print(x.read)
