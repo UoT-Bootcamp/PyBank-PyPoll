@@ -37,7 +37,7 @@ with open(csvpath) as csvfile:
         #calculate the total number of votes
         total_votes = len(total_number_votes)
         #calculate the percent of votes and round the number
-        percent_calc = round((candidate[key_name] / total_votes) * 100, 3)
+        percent_calc = (candidate[key_name] / total_votes) * 100
         ####percent_calc = format((candidate[key_name] / total_votes) * 100, '.3f')
         #format the above calculation to 3 decimal places
         
@@ -62,7 +62,7 @@ print("------------------------------\n")
 
 for new_name, percentage_of_votes in sorted(percent_votes.items(), key=lambda item:item[1], reverse =True):
     
-    print(str(new_name) + ": " + str(percentage_of_votes) + "% (" + str(candidate[new_name]) + ")" + "\n")   
+    print(str(new_name) + ": " + format(percentage_of_votes, '.3f') + "% (" + str(candidate[new_name]) + ")" + "\n")   
 print("------------------------------\n")
 print("Winner: " + winner_name + "\n")
 print("------------------------------")
@@ -75,7 +75,7 @@ x.write("------------------------------\n")
 x.write("Total Votes: " + str(total_votes) + "\n")
 x.write("------------------------------\n")
 for new_name, percentage_of_votes in sorted(percent_votes.items(), key=lambda item:item[1], reverse =True):
-    x.write(str(new_name) + ": " + str(percentage_of_votes) + "% (" + str(candidate[new_name]) + ")" + "\n")
+    x.write(str(new_name) + ": " + format(percentage_of_votes, '.3f') + "% (" + str(candidate[new_name]) + ")" + "\n")
 x.write("------------------------------\n")
 x.write("Winner: " + winner_name + "\n") 
 x.write("------------------------------") 
