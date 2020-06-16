@@ -38,11 +38,11 @@ with open(csvpath) as csvfile:
         total_votes = len(total_number_votes)
         #calculate the percent of votes and round the number
         percent_calc = round((candidate[key_name] / total_votes) * 100, 3)
+        ####percent_calc = format((candidate[key_name] / total_votes) * 100, '.3f')
         #format the above calculation to 3 decimal places
         
         #assign the percent of votes of each candidates to their key
         percent_votes[key_name] = percent_calc
-        # format_percent = format(percent_calc, '.3f')
     
         #calculate the maximum of all votes
         all_values = percent_votes.values()
