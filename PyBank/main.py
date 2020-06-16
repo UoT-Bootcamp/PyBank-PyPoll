@@ -71,13 +71,13 @@ with open(csvpath, 'r') as csvfile:
     print(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})")
 
     #write the new .txt file
-    x = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Analysis", "pybank.txt"), 'w')
+    pyBank = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Analysis", "pybank.txt"), 'w')
     
-    x.write("Financial Analysis\n")
-    x.write("-------------------------------\n")
-    x.write (f"Total Months: {len(months_num)}\n")
-    x.write (f"Total: ${sum_profit_losses}\n")
-    x.write (f"Average Change: ${average_change_profit_losses}\n")
-    x.write (f"Greatest Increase in profits: {greatest_profit_date} (${greatest_increase_profit})\n")
-    x.write(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})\n")
-    x.close()
+    pyBank.write("Financial Analysis\n")
+    pyBank.write("-------------------------------\n")
+    pyBank.write (f"Total Months: {len(months_num)}\n")
+    pyBank.write (f"Total: ${sum_profit_losses}\n")
+    pyBank.write (f"Average Change: ${average_change_profit_losses}\n")
+    pyBank.write (f"Greatest Increase in profits: {greatest_profit_date} (${greatest_increase_profit})\n")
+    pyBank.write(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})\n")
+    pyBank.close()

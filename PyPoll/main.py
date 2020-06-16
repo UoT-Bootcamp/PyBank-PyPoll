@@ -77,4 +77,5 @@ print("------------------------------")
 #write the output in .txt file
 pyPoll.write("------------------------------\n")
 pyPoll.write("Winner: " + winner_name + "\n") 
-pyPoll.write("------------------------------") 
+pyPoll.write("------------------------------")
+pyPoll.close()
