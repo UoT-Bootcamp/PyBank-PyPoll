@@ -16,11 +16,8 @@ In addition, the final script should both print the analysis to the terminal and
 
 The output will be: 
 
-<br>
-
 ![img](https://github.com/UoT-Bootcamp/PyBank-PyPoll/blob/master/screenshots/pybank.png)
 
-<br>
 
 ## PyPoll :
 
@@ -36,11 +33,7 @@ For this, we will be given a set of poll data called election_data.csv. The data
 
 The output will be:
 
-<br>
 
 ![img](https://github.com/UoT-Bootcamp/PyBank-PyPoll/blob/master/screenshots/pypoll.png)
-
-<br>
-
 
 In addition, the final script should both print the analysis to the terminal and export a text file with the results.
