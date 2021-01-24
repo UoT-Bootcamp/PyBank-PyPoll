@@ -14,7 +14,13 @@ Our task is to create a Python script that analyzes the records to calculate eac
 
 In addition, the final script should both print the analysis to the terminal and export a text file with the results.
 
+The output will be: 
 
+<br>
+
+![img](https://github.com/UoT-Bootcamp/PyBank-PyPoll/blob/master/screenshots/pybank.png)
+
+<br>
 
 ## PyPoll :
 
@@ -27,5 +33,14 @@ For this, we will be given a set of poll data called election_data.csv. The data
 * The percentage of votes each candidate won
 * The total number of votes each candidate won
 * The winner of the election based on popular vote.
+
+The output will be:
+
+<br>
+
+![img](https://github.com/UoT-Bootcamp/PyBank-PyPoll/blob/master/screenshots/pypoll.png)
+
+<br>
+
 
 In addition, the final script should both print the analysis to the terminal and export a text file with the results.
