@@ -4,7 +4,8 @@ import csv
 
 #Define the path of budget_data.csv file
 #csvpath = os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Resources", 'budget_data.csv')
-csvpath = os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Resources", "budget_data.csv")
+csvpath = os.path.join("Resources/budget_data.csv")
+# csvpath = os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Resources", "budget_data.csv")
 #Open the budget_data.csv file in read mode
 with open(csvpath, 'r') as csvfile:
     
@@ -71,7 +72,7 @@ with open(csvpath, 'r') as csvfile:
     print(f"Greatest Decrease in Profits: {greatest_losses_date} (${greatest_decrease_losses})")
 
     #write the new .txt file
-    pyBank = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyBank/Analysis", "pybank.txt"), 'w')
+    pyBank = open(os.path.join("Analysis/pybank.txt"), 'w')
     
     pyBank.write("Financial Analysis\n")
     pyBank.write("-------------------------------\n")

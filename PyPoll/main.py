@@ -3,7 +3,7 @@ import os
 import csv
 
 #Define the path
-csvpath = os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyPoll/Resources", "election_data.csv")
+csvpath = os.path.join("Resources/election_data.csv")
 
 #set an empty list and dictionaries
 total_number_votes = []
@@ -50,7 +50,7 @@ with open(csvpath) as csvfile:
             winner_name = name
 
 #write the output to a new .txt file
-pyPoll = open(os.path.join("/Users/preeti/Desktop/GIT/Python---Challenge/PyPoll/Analysis", "PyPoll.txt"), 'w')
+pyPoll = open(os.path.join("Analysis/PyPoll.txt"), 'w')
 
 #Print the output in terminal
 print("Election Results\n")
